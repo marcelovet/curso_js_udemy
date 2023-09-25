@@ -56,15 +56,15 @@
     "javascript": "javascriptreact",
     "typescript": "typescriptreact"
   },
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "editor.fontSize": 13,
   "editor.hover.enabled": true,
   "workbench.startupEditor": "none",
   "explorer.compactFolders": false,
   "terminal.integrated.fontSize": 12,
   "editor.rulers": [80, 120],
-  "workbench.colorTheme": "OM Theme (Default Dracula Italic)",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "OM Theme (No Italic)",
+  "workbench.iconTheme": "vs-seti",
   "code-runner.executorMap": {
     "python": "clear ; python -u",
     "javascript": "clear ; node"
