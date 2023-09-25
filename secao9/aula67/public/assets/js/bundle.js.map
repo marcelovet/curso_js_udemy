@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","mappings":"AACAA,QAAQC,IADK","sources":["webpack://aula67/./src/index.js"],"sourcesContent":["const nome = 'nome' + 'asda'\r\nconsole.log(nome)\r\n"],"names":["console","log"],"sourceRoot":""}

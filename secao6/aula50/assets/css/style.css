@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+:root {
+  --primary-color: rgb(17, 86, 102);
+  --primary-color-darker: rgb(9, 48, 56);
+  
+  --primary-box-color: rgb(255, 217, 145);
+  --secondary-box-color: rgb(27, 144, 170);
+  
+  --primary-box-font-color: rgb(110, 70, 1);
+  --secondary-box-font-color: rgb(16, 45, 52);
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+  font-family: 'Open sans', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+.container {
+  max-width: 640px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+form input, form label, form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+form input {
+  font-size: 24px;
+  height: 50px;
+  padding: 0 20px;
+}
+
+form input:focus {
+  outline: 1px solid var(--primary-color);
+}
+
+form button {
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+form button:hover {
+  background: var(--primary-color-darker);
+}
+
+.calculadora {
+  width: 600px;
+}
+
+.display {
+  font-size: 2rem;
+  width: 100%;
+  text-align: right;
+}
+
+.btn {
+  width: 150px;
+  color: var(--secondary-box-font-color);
+  background-color: rgba(248, 245, 245, 0.545);
+  border: .5px solid rgb(165, 152, 152);
+  height: 50px;
+  border-radius: 5px;
+  box-shadow: .5px .5px 2px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgba(248, 245, 245, 1);
+}
+
+.btn-del, .btn-clear {
+  background-color: rgba(224, 78, 78, .6);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.btn-del:hover, .btn-clear:hover {
+  background-color: rgba(224, 78, 78, 1);
+}
+
+.btn-eq {
+  background-color: rgba(70, 117, 235, 0.6);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.btn-eq:hover {
+  background-color: rgba(70, 117, 235, 1);
+}

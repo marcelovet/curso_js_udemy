@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modelo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <body>
+
+    <section class="container">
+      <h1>Gerador de CPF</h1>
+      <div class="cpf-gerado"></div>
+      <h1>Registro de usuario</h1>
+      <ul>
+        <li>Nenhum campo pode estar vazio</li>
+        <li>Usuario so pode conter letras e/ou numeros</li>
+        <li>Usuario deve ter entre 3 e 12 caracteres</li>
+        <li>Senha precisa ter entre 6 e 12 caracteres</li>
+      </ul>
+      <form action="/" method="POST" class="formulario">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" class="register-field">
+
+        <label for="sobrenome">Sobrenome:</label>
+        <input type="text" name="sobrenome" id="sobrenome" class="register-field">
+
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" id="cpf" class="register-field">
+
+        <label for="usuario">Usuario:</label>
+        <input type="text" name="usuario" id="usuario" class="register-field">
+
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" id="senha" class="register-field">
+
+        <label for="repeat-senha">Repetir senha:</label>
+        <input type="password" name="repeat-senha" id="repeat-senha" class="register-field">
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <script src="./assets/js/bundle.js"></script>
+  </body>
+
+</html>

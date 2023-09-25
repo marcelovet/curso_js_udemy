@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+:root {
+  --primary-color: rgb(17, 86, 102);
+  --primary-color-darker: rgb(9, 48, 56);
+  
+  --primary-box-color: rgb(255, 217, 145);
+  --secondary-box-color: rgb(27, 144, 170);
+  
+  --primary-box-font-color: rgb(110, 70, 1);
+  --secondary-box-font-color: rgb(16, 45, 52);
+
+  --error-color: rgb(156, 6, 6);
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+  font-family: 'Open sans', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+.container {
+  max-width: 640px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+input, label, button {
+  margin-bottom: 10px;
+}
+
+.register-field {
+  font-size: 1rem;
+  height: 1.5rem;
+  padding: 0 0 0 5px;
+  margin: 0;
+}
+
+input:focus {
+  outline: 1px solid var(--primary-color);
+}
+
+button {
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+button:hover {
+  background: var(--primary-color-darker);
+}
+
+.senha-gerada {
+  margin: 10px;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 2em;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: var(--primary-box-color);
+}
+
+.senha-error {
+  margin: 10px;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 800;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: var(--secondary-box-color);
+  color: var(--error-color);
+}
+
+input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+}
