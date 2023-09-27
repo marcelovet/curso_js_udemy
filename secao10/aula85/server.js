@@ -38,7 +38,7 @@ app.use(flash())
 
 const routes = require('./routes')
 const path = require('path')
-const middlewareGlobal = require('./src/middlewares/middleware')
+const { middlewareGlobal } = require('./src/middlewares/middleware')
 
 // faz o parser de url encodada
 app.use(express.urlencoded({ extended: true }))

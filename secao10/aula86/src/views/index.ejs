@@ -1,0 +1,19 @@
+<%- include('includes/head') %>
+
+<section class="container">
+  <h1>
+    <!-- com = escapa caracteres especiais como tags -->
+    <!-- <%= titulo %><br> -->
+    <!-- com - nao escapa caracteres especiais como tags -->
+    <!-- <%- titulo %> -->
+    <% if (typeof titulo !=='undefined' ) { %> <%- titulo %> <% } else { %> O
+    titulo nao foi enviado <% } %>
+  </h1>
+  <p>
+    <% numeros.forEach(num => { %> <%= num %><br />
+    <% }) %>
+  </p>
+  <h2><%= umaVariavelLocal %></h2>
+</section>
+
+<%- include('includes/foot') %>

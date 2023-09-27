@@ -1,5 +1,5 @@
 {
-  "name": "aula_session_flash_msg",
+  "name": "aula_session_injetando_conteudo_em_view",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
