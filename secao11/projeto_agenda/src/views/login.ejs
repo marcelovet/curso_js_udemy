@@ -1,0 +1,71 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8 my-4">
+      <h1 class="text-center display-3">Criar conta ou Entrar</h1>
+      <p class="text-center lead">Acesse sua conta ou crie uma nova conta abaixo</p>
+      <div class="row">
+        
+        <div class="col-lg mt-2">
+          
+          <div style="height: 100px;">
+            <h4 class="text-center">Faca seu cadastro</h4>
+            <p class="fw-medium">Se voce ainda nao tem uma conta, preencha o formulario abaixo:</p>
+          </div>
+          
+          <form action="/login/register" method="POST">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <div class="mb-3 form-floating"">
+              <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Cadastre seu E-mail">
+              <label for="email">Cadastre seu E-mail</label>
+              <div id="emailHelp" class="form-text  my-1" style="height: 3rem;">Use um email que voce tem acesso para cadastrar sua conta.</div>
+            </div>
+
+            <div class="mb-3 form-floating">              
+              <input type="password" class="form-control" name="password" placeholder="Crie sua senha">
+              <label for="password">Crie sua senha</label>
+            </div>
+
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">Criar minha conta</button>
+            </div>
+          </form>
+
+        </div>
+        
+        <div class="col-lg mt-2">
+          
+          <div style="height: 100px;">
+            <h4 class="text-center">Acesse sua conta</h4>
+            <p class="fw-medium">Se voce ja tem uma conta, faca o login abaixo:</p>
+          </div>
+          
+          <form action="/login/login" method="POST">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <div class="mb-3 form-floating"">
+              <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="E-mail">
+              <label for="email">E-mail</label>
+              <div id="emailHelp" class="form-text  my-1" style="height: 3rem;">Use o email que voce cadastrou sua conta.</div>
+            </div>
+
+            <div class="mb-3 form-floating">              
+              <input type="password" class="form-control" name="password" placeholder="Sua senha">
+              <label for="password">Senha</label>
+            </div>
+
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">Acessar minha conta</button>
+            </div>
+          </form>
+        </div>
+      
+      </div>
+    </div>
+    <div class="col-lg-2"></div>
+  </div>
+</div>
+
+<%- include('includes/foot') %>

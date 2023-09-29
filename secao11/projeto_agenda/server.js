@@ -14,7 +14,7 @@ const MongoStore = require('connect-mongo') // criar sessions, mas salvar no mon
 const flash = require('connect-flash') // messages instantaneas
 const routes = require('./routes') // define as rotas da aplicacao
 const path = require('path') // resolver o sistema de caminhos do OS
-const { middlewareGlobal, checkCsrfError, csrfMiddleware } = require('./src/middlewares/middleware') // funcoes executadas entre a requisicao e resposta final ao cliente
+const { middlewareGlobal, checkCsrfError, csrfMiddleware, pageNotFound } = require('./src/middlewares/middleware') // funcoes executadas entre a requisicao e resposta final ao cliente
 const helmet =  require('helmet') // https://expressjs.com/en/advanced/best-practice-security.html#use-helmet
 const csrf = require('csurf') // evitar Cross-site Request Forgery
 
@@ -70,12 +70,16 @@ app.set('view engine', 'ejs')
 app.use(csrf())
 
 // declara middlewares globais
-app.use(middlewareGlobal)
+// app.use(middlewareGlobal)
 app.use(checkCsrfError)
 app.use(csrfMiddleware)
 
 // declara as rotas que serao servidas
 app.use(routes)
+
+// obrigatoriamente apos o router
+app.use(pageNotFound)
+
 
 // retorna um servidor http que fica em listen para conexoes
 // inicia o app somente ao ouvir o emit que foi enviado
