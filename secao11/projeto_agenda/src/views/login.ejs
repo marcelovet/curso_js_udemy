@@ -19,7 +19,7 @@
             <p class="fw-medium">Se voce ainda nao tem uma conta, preencha o formulario abaixo:</p>
           </div>
           
-          <form action="/login/register" method="POST">
+          <form id="form-register" action="/login/register" method="POST">
             <input type="hidden" name="_csrf" value="<%= csrfToken %>">
             <div class="mb-3 form-floating"">
               <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Cadastre seu E-mail">
@@ -46,7 +46,7 @@
             <p class="fw-medium">Se voce ja tem uma conta, faca o login abaixo:</p>
           </div>
           
-          <form action="/login/login" method="POST">
+          <form id="form-login" action="/login/login" method="POST">
             <input type="hidden" name="_csrf" value="<%= csrfToken %>">
             <div class="mb-3 form-floating">
               <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="E-mail">

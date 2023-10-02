@@ -16,9 +16,9 @@
       <% } %>
 
       <% if (contact._id) { %>
-        <form action="/contact/edit/<%= contact._id %>" method="POST">
+        <form id="form-contact" action="/contact/edit/<%= contact._id %>" method="POST">
       <% } else { %> 
-        <form action="/contact/register" method="POST">
+        <form id="form-contact" action="/contact/register" method="POST">
       <% } %>
       
         <input type="hidden" name="_csrf" value="<%= csrfToken %>">
