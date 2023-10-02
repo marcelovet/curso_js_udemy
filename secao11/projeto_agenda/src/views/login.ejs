@@ -7,6 +7,9 @@
     <div class="col-lg-8 my-4">
       <h1 class="text-center display-3">Criar conta ou Entrar</h1>
       <p class="text-center lead">Acesse sua conta ou crie uma nova conta abaixo</p>
+      
+      <%- include('includes/messages') %>
+      
       <div class="row">
         
         <div class="col-lg mt-2">
@@ -45,7 +48,7 @@
           
           <form action="/login/login" method="POST">
             <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-            <div class="mb-3 form-floating"">
+            <div class="mb-3 form-floating">
               <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="E-mail">
               <label for="email">E-mail</label>
               <div id="emailHelp" class="form-text  my-1" style="height: 3rem;">Use o email que voce cadastrou sua conta.</div>

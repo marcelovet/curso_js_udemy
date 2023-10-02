@@ -1,15 +1,66 @@
 <%- include('includes/head') %>
+<%- include('includes/nav') %>
 
-<section class="container">
-  <h1>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dicta?
-  </h1>
-  <form action="/contato" method="POST">
-    <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
-    <label for="nome">Cliente</label>
-    <input type="text" name="nome" />
-    <button>Enviar</button>
-  </form>
-</section>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8 my-4">
+      <%- include('includes/messages') %>
+      
+      <h1 class="text-center">Contato</h1>
+      
+      <% if (index) { %>
+        <p class="text-center lead">Crie seu contato abaixo</p>
+      <% } else { %> 
+        <p class="text-center lead">Edite seu contato abaixo</p>
+      <% } %>
+
+      <% if (contact._id) { %>
+        <form action="/contact/edit/<%= contact._id %>" method="POST">
+      <% } else { %> 
+        <form action="/contact/register" method="POST">
+      <% } %>
+      
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        
+        <div class="row g-3">
+          <div class="col-md-6 form-floating">
+            <input type="text" class="form-control" name="firstname" placeholder="Nome" aria-label="Cadastre o nome" value="<%= contact.firstname %>">
+            <label for="firstname">Nome</label>
+          </div>
+  
+          <div class="col-md-6 form-floating">
+            <input type="text" class="form-control" name="lastname" placeholder="Sobrenome" aria-label="Cadastre o sobrenome" value="<%= contact.lastname %>">
+            <label for="lastname">Sobrenome</label>
+          </div>
+  
+          <div class="col-md-12 form-floating">
+            <input type="tel" class="form-control" name="phone" placeholder="Telefone" aria-label="Cadastre o telefone" value="<%= contact.phone %>">
+            <label for="phone">Telefone</label>
+          </div>
+  
+          <div class="col-md-12 form-floating mb-3">
+            <input type="email" class="form-control" name="email" placeholder="E-mail" aria-label="Cadastre o e-mail" value="<%= contact.email %>">
+            <label for="email">E-mail</label>
+          </div>
+        </div>
+
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary">
+            <% if (index) { %>
+              Criar contato
+            <% } else { %>
+              Editar contato
+            <% } %>
+          </button>
+        </div>
+      </form>
+
+      
+
+    </div>
+    <div class="col-lg-2"></div>
+  </div>
+</div>
 
 <%- include('includes/foot') %>
